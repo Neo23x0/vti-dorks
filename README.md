@@ -24,7 +24,7 @@ filename:myvtfile.exe
 ```
 Malware hosted on a government URL
 ```
-itw:".gov" and positives:5+
+itw:".gov" positives:5+
 ```
 
 ## Mimikatz
