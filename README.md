@@ -14,7 +14,11 @@ Show uploads named "exploit" that have less than 5 antivirus eignes detecting th
 ```
 filename:exploit positives:5-
 ```
-
+Show uploads that contain the keyword "obfus" in the filename and exclude android samples. (android samples obstruct view) The keyword "obfus" is often found in obfuscated malware samples. 
+```
+filename:obfus NOT tag:android
+```
+Unknown origin - no description yet 
 ```
 filename:myvtfile.exe
 ```
@@ -34,8 +38,15 @@ engines:mimikatz positives:5-
 ```
 
 ## Location Based
-
+Show samples submitted from Germany with low antivirus coverage that could be successful new phishing campaigns.  
+```
+submitter:DE positives:2+ positives:10- (tag:doc OR tag:docx)
+```
 Malicious submissions from Qatar are rare and often interesting if you're after threats in the Middle Eastern region. 
 ```
 submitter:QA positives:2+
+```
+Show samples submitted from Israel with the keyword "Syria" in the filename that have 2 or more antivirus engines matching. 
+```
+submitter:IL filename:syria positives:2+
 ```
