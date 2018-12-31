@@ -22,6 +22,10 @@ Unknown origin - no description yet
 ```
 filename:myvtfile.exe
 ```
+Malware hosted on a government URL
+```
+itw:".gov" and p:5+
+```
 
 ## Mimikatz
 Show samples with filenames starting with "mimi" (rare) that have less than 5 antivirus engines with matches. 
