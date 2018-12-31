@@ -8,19 +8,23 @@ This repo lists useful Virustotal Intelligence aka Virustotal Enterprise search 
 ## Generic
 Show uploads named "payload" that have less than 5 antivirus eignes detecting them.
 ```
-filename:payload positives:5-
+name:payload positives:5-
 ```
 Show uploads named "exploit" that have less than 5 antivirus eignes detecting them. False positives are PDFs, web pages or documents with exploit descriptions.
 ```
-filename:exploit positives:5-
+name:exploit positives:5-
 ```
 Show uploads that contain the keyword "obfus" in the filename and exclude android samples. (android samples obstruct view) The keyword "obfus" is often found in obfuscated malware samples. 
 ```
-filename:obfus NOT tag:android
+name:obfus NOT tag:android
+```
+Show executable files that identify as Microsoft software but are packed with an unusual packer and have less than 10 positive antivirus matches
+```
+metadata:"Microsoft Corporation" AND tag:peexe AND ( packer:rar OR packer:upx OR packer:themida OR packer:asprox ) AND positives:10-
 ```
 Unknown origin - no description yet 
 ```
-filename:myvtfile.exe
+name:myvtfile.exe
 ```
 Malware hosted on a government URL
 ```
@@ -30,11 +34,11 @@ itw:".gov" positives:5+
 ## Mimikatz
 Show samples with filenames starting with "mimi" (rare) that have less than 5 antivirus engines with matches. 
 ```
-filename:mimi* positives:5-
+name:mimi* positives:5-
 ```
 Show samples with filenames ending with "katz.exe" (rare) that have less than 5 antivirus engines with matches. 
 ```
-filename:*katz.exe positives:5-
+name:*katz.exe positives:5-
 ```
 Show samples with some antivirus engines matches. These are often obfuscated Mimikatz variants.
 ```
@@ -52,7 +56,7 @@ submitter:QA positives:2+
 ```
 Show samples submitted from Israel with the keyword "Syria" in the filename that have 2 or more antivirus engines matching. 
 ```
-submitter:IL filename:syria positives:2+
+submitter:IL name:syria positives:2+
 ```
 
 ## Content Searches (New Feature)
@@ -68,4 +72,7 @@ Detects phishing documents that ask the user to activate macros
 content:"click enable editing"
 content:"click enable content"
 ```
-
+Detects exploit codes 
+```
+content:"] Shellcode"
+```
