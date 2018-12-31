@@ -24,7 +24,7 @@ filename:myvtfile.exe
 ```
 Malware hosted on a government URL
 ```
-itw:".gov" and p:5+
+itw:".gov" and positives:5+
 ```
 
 ## Mimikatz
@@ -54,3 +54,19 @@ Show samples submitted from Israel with the keyword "Syria" in the filename that
 ```
 submitter:IL filename:syria positives:2+
 ```
+
+## Content Searches (New Feature)
+
+Content searches cannot be combined with other conditions. 
+
+Search for well-known mimikatz keyword in any type of sample. 
+```
+content:"sekurlsa::logonpasswords"
+```
+Detects samples Phishing documents that ask the user to activate macros
+```
+content:"click enable editing"
+content:"click enable content"
+```
+
+
