@@ -31,7 +31,19 @@ Malware hosted on a government URL
 itw:".gov" positives:5+
 ```
 
+## VirusTotal Features
+
+Find PE files submitted to VT, within n-seconds of compilation, that trigger at least 5 detections
+```
+subspan:300- positives:5+
+```
+You can tune it a bit using:
+`submitter:US` - US submitter
+`submitter:web` - web submitter
+`submissions:2-` - submitted less then 2 times
+
 ## Mimikatz
+
 Show samples with filenames starting with "mimi" (rare) that have less than 5 antivirus engines with matches. 
 ```
 name:mimi* positives:5-
@@ -44,6 +56,14 @@ Show samples with some antivirus engines matches. These are often obfuscated Mim
 ```
 engines:mimikatz positives:5-
 ```
+
+## Special Threat Related
+
+Example way to find Shamoon using the resource names:
+```
+resource:"PKCS7" and resource:"X509"
+```
+Reference: https://unit42.paloaltonetworks.com/unit42-shamoon-2-return-disttrack-wiper/
 
 ## Location Based
 Show samples submitted from Germany with low antivirus coverage that could be successful new phishing campaigns.  
