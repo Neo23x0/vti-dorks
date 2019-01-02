@@ -30,9 +30,6 @@ Malware hosted on a government URL
 ```
 itw:".gov" positives:5+
 ```
-
-## VirusTotal Features
-
 Find PE files submitted to VT, within n-seconds of compilation, that trigger at least 5 detections
 ```
 subspan:300- positives:5+
