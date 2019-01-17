@@ -76,6 +76,12 @@ Show samples submitted from Israel with the keyword "Syria" in the filename that
 submitter:IL name:syria positives:2+
 ```
 
+## macOS
+Hunting signed macOS DMGs with minimum detections (often caused by heuristics) 
+```
+ls:2019-01-16+ type:dmg positives:2+ tag:signed
+```
+
 ## Content Searches (New Feature)
 
 Content searches cannot be combined with other conditions. 
