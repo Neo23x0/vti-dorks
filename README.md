@@ -63,13 +63,13 @@ resource:"PKCS7" and resource:"X509"
 Reference: https://unit42.paloaltonetworks.com/unit42-shamoon-2-return-disttrack-wiper/
 
 ## Location Based
-Show samples submitted from Germany with low antivirus coverage that could be successful new phishing campaigns.  
+Show samples submitted from Germany with low antivirus coverage that could be successful phishing campaigns.  
 ```
 submitter:DE positives:2+ positives:10- (tag:doc OR tag:docx)
 ```
-Show samples submitted from Taiwan with low antivirus coverage that could be successful new phishing campaigns.  
+Show samples submitted from Taiwan with low antivirus coverage that could be successful NEW phishing campaigns (only 1 submitter).  
 ```
-submitter:TW positives:1+ positives:20- filename:*.eml
+submitter:TW positives:1+ positives:20- filename:*.eml submissions:1
 ```
 Malicious submissions from Qatar are rare and often interesting if you're after threats in the Middle Eastern region. 
 ```
