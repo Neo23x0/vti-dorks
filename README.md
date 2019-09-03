@@ -67,6 +67,10 @@ Show samples submitted from Germany with low antivirus coverage that could be su
 ```
 submitter:DE positives:2+ positives:10- (tag:doc OR tag:docx)
 ```
+Show samples submitted from Taiwan with low antivirus coverage that could be successful new phishing campaigns.  
+```
+submitter:TW positives:1+ positives:20- filename:*.eml
+```
 Malicious submissions from Qatar are rare and often interesting if you're after threats in the Middle Eastern region. 
 ```
 submitter:QA positives:2+
