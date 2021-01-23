@@ -103,3 +103,46 @@ Detects exploit codes
 ```
 content:"] Shellcode"
 ```
+
+## Sample Similarities
+
+Content searches for malware similaritis.
+
+VT Feature Hash is an internal hash used by Virustotal.
+```
+similar-to:<hashofthefile>
+```
+
+Code Blocks is used to look for samples that contain the same pieces of code.
+```
+code-similar-to:<hashofthefile>
+```
+
+ImpHash is a well-known hash calculated with the Import Address Table to identify samples using the same imported functions.
+```
+imphash:<IATHash>
+```
+
+PE Rich Hash is a hash calculated from Rich Header.
+```
+rich_pe_header_hash:<Richhash>
+```
+
+TLSH is used to generate hash values which can then be analyzed for similarities.
+```
+tlsh:<tlshash>
+```
+
+SSDEEP is a fuzzing algorithm that can be used for the same purpose. 
+```
+ssdeep:<ssdeep_hash>
+```
+
+The other functions are used to identify similarity based on behavior identified with sandbox analysis. 
+```
+behash:<hashofthefile>
+```
+
+
+
+
