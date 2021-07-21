@@ -85,6 +85,15 @@ Hunting signed macOS DMGs with minimum detections (often caused by heuristics)
 ```
 ls:2019-01-16+ type:dmg positives:2+ tag:signed
 ```
+## ELF
+Hunting for ELF binaries belonging to the MIRAI family
+```
+tag:elf AND p:2+ AND engines:Mirai
+```
+Hunting for ELF binaries excluding MIRAI and DDOS malware
+```
+tag:elf AND p:5+ NOT engines:Mirai NOT engines:DDOS
+````
 
 ## Content Searches (New Feature)
 
