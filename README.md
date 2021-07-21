@@ -164,6 +164,25 @@ The other functions are used to identify similarity based on behavior identified
 behash:<hashofthefile>
 ```
 
+## Malicious Websites 
+Search for Malicious Websites / Command and Control by using VTi 
 
+Search for Websites tagged as "Malware Sites" and have 5 or more antivirus engines matching
+```
+entity:url category:"Malware Sites" and p:5+
+```
 
+Search for Websites tagged as "Compromised Websites" and have 5 or more antivirus engines matching
+```
+entity:url category:"compromised websites" and p:5+
+```
 
+Search for Websites related to phishing and fraud and have 5 or more antivirus engines matching
+```
+entity:url category:"illegal phishing, phishing and fraud" and p:5+
+```
+
+Search for newly registered websites and have 5 or more antivirus engines matching
+```
+entity:url category:"newly registered websites" and p:5+
+```
