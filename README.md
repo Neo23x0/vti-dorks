@@ -85,6 +85,27 @@ Hunting signed macOS DMGs with minimum detections (often caused by heuristics)
 ```
 ls:2019-01-16+ type:dmg positives:2+ tag:signed
 ```
+## ELF
+Hunting for ELF binaries belonging to the MIRAI family
+```
+tag:elf AND p:2+ AND engines:Mirai
+```
+Hunting for ELF binaries excluding MIRAI and DDOS malware
+```
+tag:elf AND p:5+ NOT engines:Mirai NOT engines:DDOS
+```
+
+## Sandbox result searches
+VTi has several Sandboxes that will scan the behavior of the submitted files; searching for categories combined with tags can be useful.
+
+Search for ransomware using the Lastline sandbox:
+```
+lastline:RANSOM 
+```
+Searching for stealers in the pe format on C2AE sandbox. (STEALER/MALWARE/TROJAN are some keywords used by this sandbox)
+```
+c2ae:STEALER and tag:peexe
+```
 
 ## Content Searches (New Feature)
 
