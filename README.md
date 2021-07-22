@@ -1,5 +1,5 @@
 # vti-dorks
-Awesome VirusTotal Enterprise (formerly Intelligence) Search Queries
+Awesome VirusTotal Enterprise Search Queries (formerly Virustotal Intelligence or VTI) 
 
 ## Purpose
 
