@@ -1,9 +1,9 @@
 # vti-dorks
-Awesome VirusTotal Intelligence Search Queries
+Awesome VirusTotal Enterprise (formerly Intelligence) Search Queries
 
 ## Purpose
 
-This repo lists useful Virustotal Intelligence aka Virustotal Enterprise search queries that are useful for threat hunting purposes. Please provide your favorite search queries as pull requests. 
+This repo lists useful Virustotal Enterprise search queries that are useful for threat hunting purposes. Please provide your favorite search queries as pull requests. 
 
 ## Generic
 Show uploads named "payload" that have less than 5 antivirus eignes detecting them.
