@@ -127,7 +127,7 @@ content:"] Shellcode"
 
 ## Sample Similarities
 
-Content searches for malware similaritis.
+Content searches for malware similarities.
 
 VT Feature Hash is an internal hash used by Virustotal.
 ```
@@ -164,6 +164,9 @@ The other functions are used to identify similarity based on behavior identified
 behash:<hashofthefile>
 ```
 
-
+Files with a visually similar icon or thumbnail.
+```
+main_icon_dhash:<icon_hash>
+```
 
 
