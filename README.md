@@ -169,4 +169,8 @@ Files with a visually similar icon or thumbnail.
 main_icon_dhash:<icon_hash>
 ```
 
+.NET files that were built in one project have the same GUID value
+```
+netguid:<GUID>
+```
 
