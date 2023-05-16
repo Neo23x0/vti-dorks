@@ -125,7 +125,7 @@ Detects exploit codes
 content:"] Shellcode"
 ```
 
-## Sample Similarities
+## Sample Similarities and Pivoting
 
 Content searches for malware similarities.
 
@@ -173,4 +173,11 @@ main_icon_dhash:<icon_hash>
 ```
 netguid:<GUID>
 ```
+
+Permhash is used to hash the declared permissions applied to Chromium-based browser extensions and APKs
+```
+permhash:<permhash>
+```
+
+
 
